@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: github-pages
 
     steps:
       - name: Checkout code
@@ -21,6 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set Git user
+        run: |
+          git config --global user.email "tannerowens10@gmail.com"
+          git config --global user.name "ParagonTeo"
 
       - name: Set OpenAI API key environment variable
         run: echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> $GITHUB_ENV
