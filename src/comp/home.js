@@ -1,9 +1,7 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
-import HomeIcon from "@mui/icons-material/Home";
 import MapIcon from "@mui/icons-material/Map";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import PersonIcon from "@mui/icons-material/Person";
@@ -17,11 +15,7 @@ import {
   Container,
   Grid,
   IconButton,
-  InputBase,
-  List,
-  ListItem,
   ListItemIcon,
-  ListItemText,
   Toolbar,
   Typography,
   TextField,
