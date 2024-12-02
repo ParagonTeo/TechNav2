@@ -96,7 +96,8 @@ const Frame2 = () => {
   
     setInput("");
   };
-  
+
+  console.log('API Key:', apiKey);
 
   return (
     <Box sx={{ flexGrow: 1 }}>

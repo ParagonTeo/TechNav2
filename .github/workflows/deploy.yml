@@ -32,6 +32,7 @@ jobs:
       - name: Set OpenAI API key environment variable
         run: echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> $GITHUB_ENV
 
+
       - name: Deploy application
         run: |
           npm run build
