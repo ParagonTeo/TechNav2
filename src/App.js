@@ -7,7 +7,7 @@ import Frame3 from './comp/bus.'; // Your Bus Schedules Page component
 
 function App() {
   return (
-    <Router>
+    <Router basename ="/TechNav2">
       <Routes>
         <Route path="/" element={<Frame1 />} />
         <Route path="/map" element={<Map />} />
