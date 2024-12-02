@@ -80,7 +80,7 @@ const Frame2 = () => {
           },
         }
       );
-  
+
       const botResponse = {
         user: "ChatGPT",
         text: response.data.choices[0].message.content,
@@ -96,8 +96,6 @@ const Frame2 = () => {
   
     setInput("");
   };
-
-  console.log('API Key:', apiKey);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
