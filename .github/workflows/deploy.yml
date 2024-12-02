@@ -1,0 +1,29 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - master  # Adjust if using a different branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: github-pages
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Set OpenAI API key environment variable
+        run: echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> $GITHUB_ENV
+
+      - name: Deploy application
+        run: npm run deploy  # Adjust this command for your deployment process
