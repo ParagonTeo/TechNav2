@@ -23,11 +23,13 @@ jobs:
 
       - name: Set Git user
         run: |
-          git config --global user.email "tannerowens10@gmail.com"
-          git config --global user.name "ParagonTeo"
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your Name"
 
       - name: Set OpenAI API key environment variable
         run: echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> $GITHUB_ENV
 
       - name: Deploy application
-        run: npm run deploy  # Adjust this command for your deployment process
+        run: |
+          npm run build
+          npx gh-pages -d build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
