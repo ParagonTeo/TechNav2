@@ -5,6 +5,9 @@ on:
     branches:
       - master  # Adjust if using a different branch
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
